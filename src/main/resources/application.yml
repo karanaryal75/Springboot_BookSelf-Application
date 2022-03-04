@@ -1,15 +1,22 @@
+
+datadump.location:
+    author: C:\Users\15635\Desktop\SpringBoot_REstAPI\Projects\bookSelf\bookself-data-loader\src\main\resources\author_data_dump.txt
+    work: C:\Users\15635\Desktop\SpringBoot_REstAPI\Projects\bookSelf\bookself-data-loader\src\main\resources\author_data_dump.txt
+
 spring:
   data:
     cassandra:
         keyspace-name: main
-        username: PWZSDRuZezZnblWQLpcufxHU
-        password: Qove4,ZRs8Li,Q_zHMUJfCdQ_bcsHvZjhxfLXMWzjX2Sh0SAuoC3BsRBcN.0WTjg7KxwILUExXQekyxZy556XmeeLan3i4U.HlkeFHk3z,0rh+eg1bBaoCqbl0ok9tn5
-        schema-action: create-if-not-exists
+        username: btOtzokZUOZviBBTsrCdQass
+        password: 4PF4D33ovOzPrR_JlUF5x_SyHW4ky93OMKfc4bK7HmZ+QUm01YHylhoRC6Ht0ZZwXuEm5RlZXvBQ-I2h99TRfZ1F.CphU6Uvt9W+_K3qnuavxubfNH.WklGqcQpusY_A
+        schema-action: recreate
         request:
             timeout: 10s
         connection:
             connect-timeout: 10s
             init-query-timeout: 10s
+            
+spring.main.allow-circular-references: true
 
 datastax.astra:
     secure-connect-bundle: secure-connect.zip
@@ -18,7 +25,8 @@ astra.db:
     id: bacd0629-b805-4572-a42c-aade39422efe-1
     region: us-east1	
     keyspace: main
-    application.token: AstraCS:PWZSDRuZezZnblWQLpcufxHU:27892019f503fc2f81bf9fe34c6c7099acc24f0e728def104e60dad0311b5d61
+    application.token: AstraCS:btOtzokZUOZviBBTsrCdQass:c8c7aefd0a3d11f7c95cbc9f63ac29529365769c1d715f20abf661345553111c
+
 
 
 
