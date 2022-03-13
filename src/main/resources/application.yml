@@ -1,20 +1,29 @@
 
-datadump.location:
-    author: C:\Users\15635\Desktop\SpringBoot_REstAPI\Projects\bookSelf\bookself-data-loader\src\main\resources\author_data_dump.txt
-    work: C:\Users\15635\Desktop\SpringBoot_REstAPI\Projects\bookSelf\bookself-data-loader\src\main\resources\author_data_dump.txt
+# datadump.location:
+#     author: C:\Users\15635\Desktop\SpringBoot_REstAPI\Projects\bookSelf\bookself-data-loader\src\main\resources\author_data_dump.txt
+#     work: C:\Users\15635\Desktop\SpringBoot_REstAPI\Projects\bookSelf\bookself-data-loader\src\main\resources\work_data_dump.txt
 
 spring:
+  application:
+    name: bookSelf
   data:
     cassandra:
         keyspace-name: main
         username: btOtzokZUOZviBBTsrCdQass
         password: 4PF4D33ovOzPrR_JlUF5x_SyHW4ky93OMKfc4bK7HmZ+QUm01YHylhoRC6Ht0ZZwXuEm5RlZXvBQ-I2h99TRfZ1F.CphU6Uvt9W+_K3qnuavxubfNH.WklGqcQpusY_A
-        schema-action: recreate
+        schema-action: create-if-not-exists
         request:
             timeout: 10s
         connection:
             connect-timeout: 10s
             init-query-timeout: 10s
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Iv1.22fff72a8e787d93
+            client-secret: e48672fa64de60c97cdbd535e00865b8346b163b
             
 spring.main.allow-circular-references: true
 
